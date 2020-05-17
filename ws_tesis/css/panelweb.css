@@ -1,0 +1,127 @@
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    background: #367fa9;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+.list-group-item-action{
+    color:#b8c7ce;
+}
+
+.border-right{
+    border-right:0px !important;
+}
+
+.bg-light {
+    background-color: #222d32 !important;
+}
+
+.border-bottom {
+    border-bottom: 0px;
+}
+
+border-box{
+    background-color: none;
+}
+
+.bg-light-cab{
+    background-color: #3c8dbc !important;
+}
+
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #E5E5E5;
+  text-align: center;
+}
+body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    background: #ecf0f5;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.btnday {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.15s;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btnday:hover {
+  background-color: #495057;
+  color: white;
+}
+
+
+.hora{
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    text-align: center;
+}
+
+.hora, p{
+    margin: 0px;
+}
+.card-dia{
+    width: 200px;
+    margin:10px;
+}
+/*
+.card-body{
+    padding-top: 0px;
+    text-align: center;
+}*/

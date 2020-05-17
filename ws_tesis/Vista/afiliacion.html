@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Afiliación</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="../css/paginaweb.css">
+    <script src="../js/paginaafiliacion.js"></script>
+</head>
+<body>
+    <div class="container-fluid cabecera">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                            <p class="text-white bold">MedicalApp</p>
+                            <span class="border border-white"></span>
+                        <div class="col col-cabecera">
+                            <div class="texto-cabecera">Plataforma para la gestión de
+                            citas médicas del Perú</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid menu-recorrido">
+        <div class="container">
+            <ul id="menu">
+                <li>Inicio</li>
+                <li><img src="../iconos/svg/chevron-right.svg"></li>
+                <li>Afiliaci&oacute;n</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container contenido">
+        <h3>Pasos para poder afiliar tu centro de salud a nosotros</h3>
+        <br>
+        <br>
+        <div class="container"><!--PASO 1-->
+            <div class="row">
+                <img src="../iconos/1.svg">
+                <div class="col">
+                    <p class="pasos">Ingresa tu documento de identidad en la barra de abajo</p>
+                </div>
+            </div>
+            <!--MENSAJE DE ALERTA NO SE ENCONTRÓ DNI-->
+
+            <div class="alert alert-danger alert-dismissible fade show" id="mensajeDNI" name="mensajeDNI">
+                <strong>Error!</strong> <span id="errordni"></span>
+            </div>
+           
+           
+            <div class="row no-gutters">
+                <div class="col-6 col-md-4">
+                    
+                    <div class="card">
+                        <div class="card-header">Ingrese su DNI</div>
+                            <div class="card-body">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="dni" name="dni" maxlength="8">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-success" onclick="buscarDNI()">Buscar</button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <input id="fechaNac" value="09/05/1998"/>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-control" id="sexo">
+                                            <option value="1">Masculino</option>
+                                            <option value="2">Femenino</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <br>
+                            <p class="card-text">Al darle al bot&oacute;n buscar, la aplicación reconocerá sus datos personales en el lado derecho de la pantalla.</p>
+                        </div>
+                    </div>
+                
+                </div>
+                
+                
+                <div class="col-12 col-sm-6 col-md-8">
+                    <div class="container">
+                        <div class="card">
+                            <div class="card-header">Datos Personales:</div>
+                            <div class="card-body">
+                               <div class="row">
+                                    <p class="datos-personales">DNI:</p>
+                                    <div class="col">
+                                        <fieldset disabled>
+                                            <input type="text" id="datodni" name="datodni" class="form-control form-control-sm">
+                                        </fieldset>
+                                    </div>   
+                                </div>
+                                <div class="row">
+                                    <p class="datos-personales">Nombres:</p>
+                                    <div class="col">
+                                        <fieldset disabled>
+                                            <input type="text" id="nombres" name="nombres" class="form-control form-control-sm">
+                                        </fieldset>
+                                    </div>   
+                                </div>
+                                <div class="row">
+                                    <p class="datos-personales">Apellido Paterno:</p>
+                                    <div class="col">
+                                        <fieldset disabled>
+                                            <input type="text" id="paterno" name="paterno" class="form-control form-control-sm">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p class="datos-personales">Apellido Materno:</p>
+                                    <div class="col">
+                                        <fieldset disabled>
+                                            <input type="text" id="materno" name="materno" class="form-control form-control-sm">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p class="datos-personales">Direcci&oacute;n:</p>
+                                    <div class="col">
+                                        <fieldset disabled>
+                                            <input type="text" id="direccion" name="direccion" class="form-control form-control-sm">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+        <br>
+        <div class="container"><!--PASO 2-->
+            <div class="row">
+                <img src="../iconos/2.svg">
+                <div class="col">
+                    <p class="pasos">Ingresa el C&oacute;digo &Uacute;nico de tu instituci&oacute;n</p>
+                </div>
+            </div>
+            <!--MENSAJE DE ALERTA NO SE ENCONTRÓ DNI-->
+
+            <div class="alert alert-danger alert-dismissible fade show" id="mensajeIPRESS" name="mensajeIPRESS">
+                <strong>Error!</strong> <span id="erroripress"></span>
+            </div>
+           
+           
+            <div class="row no-gutters">
+                <div class="col-6 col-md-4">
+                    
+                    <div class="card">
+                        <div class="card-header">Ingrese su C&oacute;digo &Uacute;nico de su IPRESS</div>
+                            <div class="card-body">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="codigoipress" name="codigoipress" maxlength="8">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-success" onclick="buscarIPRESS()">Buscar</button>
+                                    </div>
+                                </div>
+                                <br>
+                            <p class="card-text">Al darle al bot&oacute;n buscar, la aplicaci&oacute;n reconocer&aacute; los datos de su IPRESS.</p>
+                        </div>
+                    </div>
+                
+                </div>
+                
+                
+                <div class="col-12 col-sm-6 col-md-8">
+                    <div class="container">
+                        <div class="card">
+                            <div class="card-header">Datos de la IPRESS:</div>
+                            <div class="card-body">
+                               <div class="row">
+                                    <p class="datos-personales">IPRESS:</p>
+                                    <div class="col">
+                                        <fieldset disabled>
+                                            <input type="text" id="codipress" name="codipress" class="form-control form-control-sm"><!--PROPIETARIO_RUC-->
+                                        </fieldset>
+                                    </div>   
+                                </div>
+                                <div class="row">
+                                    <p class="datos-personales">RUC:</p>
+                                    <div class="col">
+                                        <fieldset disabled>
+                                            <input type="text" id="rucipress" name="rucipress" class="form-control form-control-sm"><!--PROPIETARIO_RUC-->
+                                        </fieldset>
+                                    </div>   
+                                </div>
+                                <div class="row">
+                                    <p class="datos-personales">Nombre de la IPRESS:</p>
+                                    <div class="col">
+                                        <fieldset disabled>
+                                            <input type="text" id="nombreipress" name="paterno" class="form-control form-control-sm"><!--ESTABLECIMIENTO_NOMBRE-->
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p class="datos-personales">Correo:</p>
+                                    <div class="col">
+                                        <fieldset disabled>
+                                            <input type="text" id="correoipress" name="correoipress" class="form-control form-control-sm"><!--REPLEGAL_CORREO-->
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p class="datos-personales">Direcci&oacute;n:</p>
+                                    <div class="col">
+                                        <fieldset disabled>
+                                            <input type="text" id="direccionipress" name="direccionipress" class="form-control form-control-sm"><!--ESTABLECIMIENTO_DIRECCION-->
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p class="datos-personales">Representante :</p>
+                                    <div class="col">
+                                        <fieldset disabled>
+                                            <input type="text" id="representanteipress" name="representanteipress" class="form-control form-control-sm"><!--REPLEGAL_DATOS-->
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div> 
+        </div>
+        <br>
+        <div class="container">
+        <div class="row">
+            <img src="../iconos/3.svg">
+            <div class="col">
+                <p class="pasos">Ingrese el documento de la solicitud de inscripci&oacute;n aprobada por Susalud</p>
+            </div>
+        </div>
+             <div class="alert alert-danger alert-dismissible fade show" id="mensajeArchivo" name="mensajeArchivo">
+                <strong>Error!</strong> <span id="errorarchivo"></span>
+            </div>
+            <form>
+                <div class="custom-file">
+                <input type="file" class="custom-file-input" id="archivo">
+                <label class="custom-file-label" for="customFile">Elije tu documento</label>
+                </div>
+            </form>     
+        </div>
+        <br>
+        <br>
+        <br>
+        
+    <div class="row">
+        <div class="span6" style="float: none; margin: 0 auto;">
+           <button type="button" class="btn btn-primary" style="padding-top: 15px;padding-bottom:15px" onclick="insertarSolicitud()">ENVIAR SOLICITUD DE REGISTRO</button>
+        </div>
+    </div>
+
+    </div>
+
+    <footer class="mojFooter">
+        <font face="Roboto Condensed"> 
+            <div class="footer"><strong>.</strong></div>
+        </font> 
+    </footer>
+    <script>
+        $('#fechaNac').datepicker({
+            uiLibrary: 'bootstrap4',
+            format: 'dd/mm/yyyy'
+        });
+    </script>
+    <script>
+        $(".custom-file-input").on("change", function() {
+          var fileName = $(this).val().split("\\").pop();
+          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+    
+</body>
+</html>

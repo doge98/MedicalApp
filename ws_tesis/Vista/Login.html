@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title> 
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link href="../css/login.css" rel="stylesheet">
+</head>
+    <body class="fondohtml-login">
+        <div class="container">
+            <div class="container container-login">
+                <div class="login-cabecera"><strong>MedicalApp</strong></div>
+                <div class="login-contenido">
+                    <form method="post" action="../ws/web/sesion.iniciar.php">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="p_usuario" name ="p_usuario" describedby="emailHelp" placeholder="Ingresa tu email...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Contraseña</label>
+                            <input type="password" class="form-control" id="p_clave" name="p_clave" placeholder="Contraseña...">
+                        </div>
+                        <button type ="submit" class="login-boton">Iniciar Sesión</button>
+                        <button class="login-boton">Recuperar Contraseña</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
