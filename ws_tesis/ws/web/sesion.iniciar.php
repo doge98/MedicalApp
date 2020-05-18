@@ -11,7 +11,7 @@ require_once('../../util/Clases/Funciones.clase.php');
     $clave=$_POST["p_clave"];
     
     try{
-        $objSesion=new Sesion();
+        /*$objSesion=new Sesion();
         $objSesion->setCorreo($usuario);
         $objSesion->setClave($clave);
         $resultado=$objSesion->loginweb();
@@ -38,7 +38,9 @@ require_once('../../util/Clases/Funciones.clase.php');
             }
         }else{
             header("location: ../../Vista/Login.html");
-        }
+        }*/
+        $message = "wrong answer";
+        echo "<script type='text/javascript'>alert('$message');</script>";
     }catch(Exception $exc){
         Funciones::imprimeJSON(500,$exc->getMessage(),"");
     }
