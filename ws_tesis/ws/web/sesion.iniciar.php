@@ -1,9 +1,4 @@
 <?php
-
-$message = "wrong answer";
-        echo "<script type='text/javascript'>alert('$message');</script>";
-
-/*
 require_once("../../logica/Sesion.clase.php");
 require_once('../../util/Clases/Funciones.clase.php');
 
@@ -47,5 +42,4 @@ require_once('../../util/Clases/Funciones.clase.php');
     }catch(Exception $exc){
         Funciones::imprimeJSON(500,$exc->getMessage(),"");
     }
-*/
 ?>
