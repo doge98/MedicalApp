@@ -9,7 +9,7 @@
         "codigo_unico_ipress":"00000023",
         "nombre_comercial":"C.S. I-3 9 DE OCTUBRE",
         "latitud":"-3.76457022",
-        "longitud""-73.24459961":
+        "longitud":"-73.24459961"
     },
     {
         "codigo_unico_ipress":"00000003",
