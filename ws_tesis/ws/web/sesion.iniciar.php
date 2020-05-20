@@ -2,10 +2,10 @@
 require_once("../../logica/Sesion.clase.php");
 require_once('../../util/Clases/Funciones.clase.php');
 
-    if(!isset($_POST["p_usuario"]) || !isset($_POST["p_clave"])){
+    /*if(!isset($_POST["p_usuario"]) || !isset($_POST["p_clave"])){
         Funciones::imprimeJSON(500,"Faltan datos requeridos","");
         exit();
-    }
+    }*/
     $usuario=$_POST["luis.ing98@hotmail.com"];
     $clave=$_POST["123456"];
     
