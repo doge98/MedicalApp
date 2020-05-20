@@ -1,4 +1,6 @@
-$prueba = '[
+<?php
+
+var $prueba = '[
     {
         "codigo_unico_ipress":"00000001",
         "nombre_comercial":"HOSPITAL IQUITOS ",
@@ -29,6 +31,7 @@ $prueba = '[
         "latitud":"-3.76457022",
         "longitud":"-73.24459961"
     }
-]'
+]';
 
 echo $prueba;
+?>
