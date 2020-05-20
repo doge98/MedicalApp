@@ -2,7 +2,7 @@
 
 
 //define("SERVIDOR_BD", "34.67.39.231");34.68.222.10
-define("SERVIDOR_BD", "tesis.c6p75ldcjydd.sa-east-1.rds.amazonaws.com");
+define("SERVIDOR_BD", "postgres.c6p75ldcjydd.sa-east-1.rds.amazonaws.com");
 //define("SERVIDOR_BD", "34.67.39.231");
 define("USUARIO_BD", "postgres");
 define("CLAVE_BD", "luisvalve123");
