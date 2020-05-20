@@ -6,8 +6,8 @@ require_once('../../util/Clases/Funciones.clase.php');
         Funciones::imprimeJSON(500,"Faltan datos requeridos","");
         exit();
     }
-    $usuario=$_POST["p_usuario"];
-    $clave=$_POST["p_clave"];
+    $usuario=$_POST["luis.ing98@hotmail.com"];
+    $clave=$_POST["123456"];
     
     try{
         $objSesion=new Sesion();
