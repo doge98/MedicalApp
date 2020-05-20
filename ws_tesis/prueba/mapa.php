@@ -1,6 +1,6 @@
 <?php
 
-var $prueba = '[
+$prueba = '[
     {
         "codigo_unico_ipress":"00000001",
         "nombre_comercial":"HOSPITAL IQUITOS ",
