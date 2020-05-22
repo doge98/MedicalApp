@@ -30,6 +30,12 @@ $prueba = '[
         "nombre_comercial":"6 DE OCTUBRE",
         "latitud":"-3.76457022",
         "longitud":"-73.24459961"
+    },
+    {
+        "codigo_unico_ipress":"00000052",
+        "nombre_comercial":"Route",
+        "latitud":"-7.891037",
+        "longitud":"-79.222803"
     }
 ]';
 
