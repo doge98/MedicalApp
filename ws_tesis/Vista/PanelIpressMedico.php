@@ -258,8 +258,7 @@
             </font> 
         </footer>
     <script>
-        ipressupsmovil1combo();
-        ipressupsmovil1listar();
+    	ipressupsmovil1combo();
 		$('#buscarfechanacimiento').datepicker({
 			uiLibrary: 'bootstrap4',
 			format: 'dd/mm/yyyy'
