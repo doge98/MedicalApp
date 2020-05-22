@@ -33,9 +33,15 @@ $prueba = '[
     },
     {
         "codigo_unico_ipress":"00000052",
-        "nombre_comercial":"Route",
+        "nombre_comercial":"Route 1",
         "latitud":"-7.891037",
         "longitud":"-79.222803"
+    },
+    {
+        "codigo_unico_ipress":"00000053",
+        "nombre_comercial":"Route 2",
+        "latitud":"-7.892303",
+        "longitud":"-79.222445"
     }
 ]';
 
