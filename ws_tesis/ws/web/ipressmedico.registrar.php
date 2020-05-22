@@ -6,5 +6,9 @@ $headers = 'From: webmaster@example.com' . "\r\n" .
     'Reply-To: webmaster@example.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-mail($to, $subject, $message, $headers);
+if(mail($to, $subject, $message, $headers);){
+    echo json_encode($resultado,true);
+}else{
+    echo 'error';
+}
 ?>
