@@ -290,7 +290,7 @@ $(document).on("click", "#btnagregartablaupsmovil", function () {
         var estadoups = 0;
         for (var i = 0; i < arrayupsmedico.length; i++) {
             if (arrayupsmedico[i]["ipress_ups_codigo"] == ipress_ups_codigo) {
-                estadoups = 1;
+                estadoups = 1;F
             }
         }
         if (estadoups == 0) {
