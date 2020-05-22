@@ -24,7 +24,8 @@ require_once('../../util/Clases/Funciones.clase.php');
     $p_referenciapersona = $_POST['referencia_persona'];
 
     $p_correocuenta = $_POST['correo_cuenta'];
-	$p_correocuenta_prueba = 'luisvalve_1997@hotmail.com';
+    $p_correocuenta_prueba = 'luisvalve_1997@hotmail.com';
+    
     $p_codigocmpmedico = $_POST['codigo_cmp_medico'];
     $p_consejoregional_medico = $_POST['consejo_regional_medico'];
     $p_arrayupsmedico = $_POST['arrayupsmedico'];
@@ -37,26 +38,6 @@ require_once('../../util/Clases/Funciones.clase.php');
     try{
         require_once '../token.validar.php';
             if(validarToken($p_token)){
-                echo $p_codigounicoipress . '<br>' .
-                $p_documentopersona . '<br>' .
-                $p_nombrepersona . '<br>' .
-                $p_paternopersona . '<br>' .
-                $p_maternopersona . '<br>' .
-                $p_telefonopersona . '<br>' .
-                $p_sexopersona . '<br>' .
-                $p_civilpersona . '<br>' .
-                $p_fecnacpersona . '<br>' .
-                $p_codigodepartamento . '<br>' .
-                $p_codigoprovincia . '<br>' .
-                $p_codigodistrito . '<br>' .
-                $p_direccionpersona . '<br>' .
-                $p_referenciapersona . '<br>' .
-            
-                $p_correocuenta . '<br>' .
-                $p_correocuenta_prueba . '<br>' .              
-                $p_codigocmpmedico . '<br>' .
-                $p_consejoregional_medico . '<br>' .
-                json_encode($p_arrayupsmedico);
                 $objIpress = new Ipress();
                 $objIpress->setP_codigounicoipress($p_codigounicoipress);
                 $objIpress->setP_documentopersona($p_documentopersona);
