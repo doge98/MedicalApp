@@ -7,7 +7,7 @@ require_once('../../util/Clases/Funciones.clase.php');
     try{
         $objIpress=new Ipress();
         $resultado=$objIpress->ipresslistar();
-        echo json_encode($resultado) + '[
+        echo json_encode($resultado + '[
             {
                 "codigo_unico_ipress":"00000001",
                 "nombre_comercial":"HOSPITAL IQUITOS ",
@@ -50,7 +50,7 @@ require_once('../../util/Clases/Funciones.clase.php');
                 "latitud":"-7.892303",
                 "longitud":"-79.222445"
             }
-        ]';
+        ]');
     }catch(Exception $exc){
         Funciones::mensaje($exc->getMessage(), "e");
     }
