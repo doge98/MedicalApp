@@ -8,7 +8,8 @@ class Ipress extends Conexion{
             $sql = "select * from ipress";
             $sentencia = $this->dblink->prepare($sql);
             $sentencia->execute();
-            return $sentencia->fetch(PDO::FETCH_ASSOC);
+            $resultado = $sentencia->fetchAll();
+            return $resultado;
         } catch (Exception $exc) {
             throw $exc;
         }
