@@ -81,7 +81,7 @@ require_once('../../util/Clases/Funciones.clase.php');
                                     <p><strong class="tipo">Usuario:</strong> '.$p_correocuenta.'</p>
                                     <p><strong class="tipo">Clave:</strong> '.$resultado["clave"].'</p>
                                     <p><strong class="tipo">Panel de Control:</strong> www.login.com</p>
-									<p><strong class="tipo">Categorias de productos a ofrecer:</strong></p>';
+									<p><strong class="tipo">Unidades Prestadoras de Salud:</strong></p>';
                                    	for($i=0;$i<count($p_arrayupsmedico);$i++){
                                         $cuerpo .= '<p>'.($i+1).'. '.$p_arrayupsmedico[$i]["descripcion"].'</p>';
                                     }
@@ -139,6 +139,7 @@ require_once('../../util/Clases/Funciones.clase.php');
         Funciones::mensaje($exc->getMessage(), "e");
     }
 
+?>
 
 
 
