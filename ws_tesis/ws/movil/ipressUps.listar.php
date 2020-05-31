@@ -16,7 +16,7 @@ require_once('../../util/Clases/Funciones.clase.php');
         //require_once '../token.validar.php';
             //if(validarToken($p_token)){
                 $objIpress=new Ipress();
-                $objIpress->setP_codigounicoipress($p_codigounicoipress);
+                $objIpress->setP_codigounicoipress("00000001");
 	            $resultado=$objIpress->ipressupslistar();
                 //Funciones::imprimeJSON(200, "Éxito", $resultado);
                 echo json_encode($resultado);
