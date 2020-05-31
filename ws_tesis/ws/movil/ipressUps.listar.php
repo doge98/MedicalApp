@@ -19,7 +19,7 @@ require_once('../../util/Clases/Funciones.clase.php');
                 $objIpress->setP_codigounicoipress($p_codigounicoipress);
 	            $resultado=$objIpress->ipressupslistar();
                 //Funciones::imprimeJSON(200, "Éxito", $resultado);
-                echo $p_codigounicoipress;
+                echo $resultado;
             //}
     }catch(Exception $exc){
         Funciones::mensaje($exc->getMessage(), "e");
