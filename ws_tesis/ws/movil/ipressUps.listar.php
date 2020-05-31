@@ -16,10 +16,11 @@ require_once('../../util/Clases/Funciones.clase.php');
         //require_once '../token.validar.php';
             //if(validarToken($p_token)){
                 $objIpress=new Ipress();
-                $objIpress->setP_codigounicoipress("00000001");
+                $objIpress->setP_codigounicoipress($p_codigounicoipress);
 	            $resultado=$objIpress->ipressupslistar();
                 //Funciones::imprimeJSON(200, "Éxito", $resultado);
-                echo json_encode($resultado);
+                //echo json_encode($resultado);
+                echo json_encode($p_codigounicoipress);
             //}
     }catch(Exception $exc){
         Funciones::mensaje($exc->getMessage(), "e");
