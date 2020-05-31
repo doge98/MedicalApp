@@ -11,7 +11,7 @@ require_once('../../util/Clases/Funciones.clase.php');
         Funciones::imprimeJSON(500,"Falta el token","");
         exit();
     }*/
-    
+
     try{
         //require_once '../token.validar.php';
             //if(validarToken($p_token)){
@@ -19,7 +19,7 @@ require_once('../../util/Clases/Funciones.clase.php');
                 $objIpress->setP_codigounicoipress($p_codigounicoipress);
 	            $resultado=$objIpress->ipressupslistar();
                 //Funciones::imprimeJSON(200, "Éxito", json_encode($resultado));
-                Funciones::imprimeJSON(200, "Éxito", $resultado);
+                echo $resultado
             //}
     }catch(Exception $exc){
         Funciones::mensaje($exc->getMessage(), "e");
