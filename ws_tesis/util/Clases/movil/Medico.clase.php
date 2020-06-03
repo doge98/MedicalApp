@@ -23,7 +23,7 @@ class Medico extends Conexion{
 
     public function medicoupslistar(){
         try { 
-            $sql="select pe.*,awp.codigo_cmp_medico from medico_ipress_ups miu
+            $sql="select pe.*,awp.codigo_cmp_medico,miu.ups_medico_ipress from medico_ipress_ups miu
             inner join cuenta_web_afiliacion cwa on miu.id_afiliacion=cwa.id_afiliacion
             inner join afiliacion_web_persona awp on awp.codigo_cuenta=cwa.codigo_cuenta
             inner join persona pe on pe.documento_persona=awp.documento_persona
