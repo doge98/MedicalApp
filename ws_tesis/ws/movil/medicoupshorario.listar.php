@@ -17,7 +17,7 @@ require_once('../../util/Clases/Funciones.clase.php');
                 $objMedico=new Medico();
                 $objMedico->setP_upsmedicoipress($p_upsmedicoipress);
                 $resultado=$objMedico->medicoupshorariolistar();
-                echo json_encode($resultado);
+                echo json_encode($resultado,"hola");
                 //Funciones::imprimeJSON(200, "Éxito", $resultado);
             //}
     }catch(Exception $exc){
