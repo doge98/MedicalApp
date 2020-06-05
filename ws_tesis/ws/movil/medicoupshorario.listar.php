@@ -21,11 +21,8 @@ require_once('../../util/Clases/Funciones.clase.php');
                 //$response["estado"]	= $estado;
                 //$response["data"]	= $resultado;
                 //echo json_encode($response);
-                echo $data = json_decode($response);
-                foreach ($data as $item){
-                    echo $item . "\n";
-                }
-                //Funciones::imprimeJSON(200, "Éxito", $resultado);
+                
+                Funciones::imprimeJSON(200, "Éxito", $resultado);
             //}
     }catch(Exception $exc){
         Funciones::mensaje($exc->getMessage(), "e");
