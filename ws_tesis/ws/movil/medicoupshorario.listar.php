@@ -21,8 +21,9 @@ require_once('../../util/Clases/Funciones.clase.php');
                 //$response["estado"]	= $estado;
                 //$response["data"]	= $resultado;
                 //echo json_encode($response);
-                foreach ($response as $item){
-                    echo $item;
+                echo $data = json_decode($response);
+                foreach ($data as $item){
+                    echo $item . "\n";
                 }
                 //Funciones::imprimeJSON(200, "Éxito", $resultado);
             //}
