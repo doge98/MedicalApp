@@ -18,10 +18,7 @@ require_once('../../util/Clases/Funciones.clase.php');
                 $objIpress=new Ipress();
                 $objIpress->setP_codigounicoipress($p_codigounicoipress);
 	            $resultado=$objIpress->ipressupslistar();
-<<<<<<< HEAD
                 //Funciones::imprimeJSON(200, "Éxito", json_encode($resultado));
-=======
->>>>>>> 339bf7705b1632c583dd04be11b27dfabcc92753
                 Funciones::imprimeJSON(200, "Éxito", $resultado);
             //}
     }catch(Exception $exc){

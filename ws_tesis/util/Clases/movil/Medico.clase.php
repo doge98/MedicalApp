@@ -52,7 +52,7 @@ class Medico extends Conexion{
             $sql="select * from trabajo_medico_hora tmh
             inner join horario_trabajo ht on tmh.horatrabajo=ht.horatrabajo
             where tmh.ups_medico_ipress=:p_upsmedicoipress and estado=1
-            order by diatrabajo";
+            order by diatrabajo,hora_entrada";
             $sentencia = $this->dblink->prepare($sql);
             $sentencia -> bindParam(":p_upsmedicoipress", $this->getP_upsmedicoipress());
             $sentencia->execute();
