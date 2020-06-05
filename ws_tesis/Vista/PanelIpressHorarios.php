@@ -32,7 +32,7 @@
     <link href="../css/panelweb.css" rel="stylesheet">
 </head>
     <body>
-                <div class="d-flex" id="wrapper">
+            <div class="d-flex" id="wrapper">
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading">Panel IPRESS</div>
@@ -75,29 +75,29 @@
                     </div>
                     <div class="card">
                         <div class="card-body">
-							<div class="row">
-								<div class="col-auto">
-								<div class="d-flex flex-wrap align-content-center">
-								  <div class="p-2"><p class="font-weight-light">Seleccionar el m&eacute;dico que desea:</p>
-								  </div>
-								</div>
-								</div>
-								<div class="col-auto">
-									<div id=vercombomedico></div>
-								</div>
-							</div>
-                      		<br>
-                       		<div>
-                       			<div id="vertablaupsmedico"></div>
-                       		</div>
-                       		<div>
-                       			<div id="vertablahorario"></div>
-                       		</div>
-                       		
-                       		<br>
-                       		<div class="d-flex justify-content-center">
-							  <div class="p-2"><button type="button" class="btn btn-primary" id="btnregistrarhorario">REGISTRAR HORARIO</button></div>
-							</div>
+                            <div class="row">
+                                <div class="col-auto">
+                                <div class="d-flex flex-wrap align-content-center">
+                                <div class="p-2"><p class="font-weight-light">Seleccionar el m&eacute;dico que desea:</p>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div id=vercombomedico></div>
+                                </div>
+                            </div>
+                            <br>
+                            <div>
+                                <div id="vertablaupsmedico"></div>
+                            </div>
+                            <div>
+                                <div id="vertablahorario"></div>
+                            </div>
+                            
+                            <br>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-2"><button type="button" class="btn btn-primary" id="btnregistrarhorario">REGISTRAR HORARIO</button></div>
+                            </div>
                         </div>
                     </div>
                     <br>

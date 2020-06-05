@@ -1,9 +1,13 @@
 <?php
-
-require_once '../../util/Clases/web/Ipress.clase.php';
-require_once '../../datos/Conexion.clase.php';
-require_once('../../util/Clases/Funciones.clase.php');
+try{
+    $to      = 'luisvalve_1997@hotmail.com';
+    $subject = 'the subject';
+    $message = 'hello';
+    $headers = 'From: webmaster@example.com' . "\r\n" .
+        'Reply-To: luisvalve34@gmail.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
     
+<<<<<<< HEAD
     session_start();
     error_reporting(0);
     $p_token = $_SESSION['token'];
@@ -81,7 +85,7 @@ require_once('../../util/Clases/Funciones.clase.php');
                                     <p><strong class="tipo">Usuario:</strong> '.$p_correocuenta.'</p>
                                     <p><strong class="tipo">Clave:</strong> '.$resultado["clave"].'</p>
                                     <p><strong class="tipo">Panel de Control:</strong> www.login.com</p>
-									<p><strong class="tipo">Categorias de productos a ofrecer:</strong></p>';
+									<p><strong class="tipo">Unidades Prestadoras de Salud:</strong></p>';
                                    	for($i=0;$i<count($p_arrayupsmedico);$i++){
                                         $cuerpo .= '<p>'.($i+1).'. '.$p_arrayupsmedico[$i]["descripcion"].'</p>';
                                     }
@@ -139,6 +143,7 @@ require_once('../../util/Clases/Funciones.clase.php');
         Funciones::mensaje($exc->getMessage(), "e");
     }
 
+?>
 
 
 
@@ -152,3 +157,14 @@ require_once('../../util/Clases/Funciones.clase.php');
 
 
 
+=======
+    if(mail($to, $subject, $message, $headers)){
+        echo json_encode($resultado,true);
+    }else{
+        echo 'error';
+    }
+}catch(Exception $exc){
+    Funciones::mensaje($exc->getMessage(), "e");
+}
+?>
+>>>>>>> 17858f4757a087253a5b95eec81b24ac416e01d7
