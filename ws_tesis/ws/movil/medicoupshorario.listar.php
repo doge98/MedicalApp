@@ -17,10 +17,13 @@ require_once('../../util/Clases/Funciones.clase.php');
                 $objMedico=new Medico();
                 $objMedico->setP_upsmedicoipress($p_upsmedicoipress);
                 $resultado=$objMedico->medicoupshorariolistar();
-                header('Content-Type: application/json');
-                $response["estado"]	= $estado;
-                $response["data"]	= $resultado;
-                echo json_encode($response);
+                //header('Content-Type: application/json');
+                //$response["estado"]	= $estado;
+                //$response["data"]	= $resultado;
+                //echo json_encode($response);
+                foreach ($response as $item){
+                    echo $item;
+                }
                 //Funciones::imprimeJSON(200, "Éxito", $resultado);
             //}
     }catch(Exception $exc){
