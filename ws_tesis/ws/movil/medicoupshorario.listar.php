@@ -74,12 +74,7 @@ require_once('../../util/Clases/Funciones.clase.php');
                     
                     $i++;
                  }
-                 echo $array;
-
-                 
-                 //$response["data"]	= $array;
-                 //echo json_encode($response);
-                 //Funciones::imprimeJSON(200, "Éxito", $dato);
+                 echo '['.$array.']';
                 
                 //}
     }catch(Exception $exc){
