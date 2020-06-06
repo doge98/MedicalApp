@@ -63,5 +63,5 @@ require_once('../../util/Clases/Funciones.clase.php');
     }
 
     //dias('Viernes');
-    echo  date_default_timezone_set("America/Bogota");
+    echo date("D");
 ?>
