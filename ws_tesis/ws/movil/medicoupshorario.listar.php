@@ -10,35 +10,57 @@ require_once('../../util/Clases/Funciones.clase.php');
         Funciones::imprimeJSON(500,"Falta el token","");
         exit();
     }*/
+  
+    function dias($dia){
+        $dias_ES = array("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo");
+        $dias_EN = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
+        $nombredia = str_replace($dias_ES,$dias_EN, $dia);
 
-    try{
-        //require_once '../token.validar.php';
-            //if(validarToken($p_token)){
-                $objMedico=new Medico();
-                $objMedico->setP_upsmedicoipress($p_upsmedicoipress);
-                $resultado=$objMedico->medicoupshorariolistar();
-                $total = count($resultado);
-                $i = 1;
-                foreach ($resultado as $value) {
-                    $response["numero_dia"]	= "holi";
-                    $response["data"] = $value;
-                    if($i == 1){
-                        $array = json_encode($response);
-                    }
-                    $array = json_encode($response).','.$array;
-                    
-                    $i++;
-                 }
-                 //echo $array;
-                 echo date("D");
-                 
-                 
-                 //$response["data"]	= $array;
-                 //echo json_encode($response);
-                 //Funciones::imprimeJSON(200, "Éxito", $dato);
-                
-                //}
-    }catch(Exception $exc){
-        Funciones::mensaje($exc->getMessage(), "e");
+        if($dia == "Lunes"){
+            $posicion_real = 0;
+        }
+        if($dia == "Martes"){
+            $posicion_real = 1;
+        }
+        if($dia == "Miercoles"){
+            $posicion_real = 2;
+        }
+        if($dia == "Jueves"){
+            $posicion_real = 3;
+        }
+        if($dia == "Viernes"){
+            $posicion_real = 4;
+        }
+        if($dia == "Sabado"){
+            $posicion_real = 5;
+        }
+        if($dia == "Domingo"){
+            $posicion_real = 6;
+        }
+        /*if(substr($nombredia, 0, 3) == date("D")){
+            echo "es hoy";
+        }else{
+            echo "no es hoy";
+        }*/
+        
+        $dias = '[{"Lunes":"0"},{"Martes":"0"},{"Miercoles":"0"},{"Jueves":"0"},{"Viernes":"0"},{"Sabado":"0"},{"Domingo":"0"}]';
+        $json = json_decode($dias, true);
+        $contador = count($json);
+        $regulador = 0;
+        //echo json_decode($json[1]["Martes"]);
+
+        /*for ($i = $posicion_real; $i<$contador; $i++){
+            echo ($i+1);
+        }
+        for ($j = 0; $j<$posicion_real; $j++){
+            echo ($j+1);
+        }*/
+        if(substr($nombredia, 0, 3) == date("D")){
+            echo date("D");
+        }
+        echo date("D");
     }
+
+    dias('Viernes');
+
 ?>
