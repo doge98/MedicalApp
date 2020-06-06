@@ -10,9 +10,8 @@ require_once('../../util/Clases/Funciones.clase.php');
         Funciones::imprimeJSON(500,"Falta el token","");
         exit();
     }*/
-  
+    $dias_ES = array("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo");
     function dias($dia){
-        $dias_ES = array("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo");
         $dias_EN = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
         $nombredia = str_replace($dias_ES,$dias_EN, $dia);
 
@@ -55,7 +54,7 @@ require_once('../../util/Clases/Funciones.clase.php');
             $id++;
         }
     }
-    //echo dias('Viernes');
+
     try{
         //require_once '../token.validar.php';
             //if(validarToken($p_token)){
@@ -63,20 +62,29 @@ require_once('../../util/Clases/Funciones.clase.php');
                 $objMedico->setP_upsmedicoipress($p_upsmedicoipress);
                 $resultado=$objMedico->medicoupshorariolistar();
                 $total = count($resultado);
-                $i = 1;
-                foreach ($resultado as $value) {
-                    $response["numero_dia"]	= dias($value["diatrabajo"]);
-                    $response["data"] = $value;
-                    if($i == 1){
-                        $array = json_encode($response);
-                    }
-                    $array = json_encode($response).','.$array;
-                    
-                    $i++;
-                 }
-                 echo '['.$array.']';
+
                 
-                //}
+                $arrayobjeto=array();
+                
+                $d=0;
+                foreach($dias_ES as $id){
+                    $arrayHorario=array();
+                    $j=0;
+                    $arrayobjeto[$d]["id"]= dias($id);
+
+                    foreach ($resultado as $value) {
+                        if($id == $value["diatrabajo"]){
+                            //$arrayHorario=$value;
+                            $arrayHorario[$j]=$value;
+                            $j++; 
+                        }
+                    }
+
+                    $arrayobjeto[$d]["data"] = $arrayHorario;
+                    $d++;
+                }
+                Funciones::imprimeJSON(200, "Éxito", $arrayobjeto);
+            //}
     }catch(Exception $exc){
         Funciones::mensaje($exc->getMessage(), "e");
     }
