@@ -7,7 +7,6 @@ try{
         'Reply-To: luisvalve34@gmail.com' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
     
-<<<<<<< HEAD
     session_start();
     error_reporting(0);
     $p_token = $_SESSION['token'];
@@ -150,21 +149,3 @@ try{
 
 
 
-
-
-
-
-
-
-
-=======
-    if(mail($to, $subject, $message, $headers)){
-        echo json_encode($resultado,true);
-    }else{
-        echo 'error';
-    }
-}catch(Exception $exc){
-    Funciones::mensaje($exc->getMessage(), "e");
-}
-?>
->>>>>>> 17858f4757a087253a5b95eec81b24ac416e01d7
