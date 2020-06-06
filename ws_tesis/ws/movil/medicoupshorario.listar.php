@@ -43,13 +43,13 @@ require_once('../../util/Clases/Funciones.clase.php');
         $id = 1;
         for($i = $posicion_real; $i < 7 ; $i++){
             if($json[$i]["dia"] == $dia){
-                return $id;
+                return 'dates['.$id.']';
             }
             $id++;
         }
         for($j = 0; $j < $posicion_real; $j++){
             if($json[$j]["dia"] == $dia){
-                return $id;
+                return 'dates['.$id.']';
             }
             $id++;
         }
@@ -70,7 +70,7 @@ require_once('../../util/Clases/Funciones.clase.php');
                 foreach($dias_ES as $id){
                     $arrayHorario=array();
                     $j=0;
-                    $arrayobjeto[$d]["id"]= dias($id);
+                    $arrayobjeto[$d]["title"]= dias($id);
 
                     foreach ($resultado as $value) {
                         if($id == $value["diatrabajo"]){
