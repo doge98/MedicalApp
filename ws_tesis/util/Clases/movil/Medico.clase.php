@@ -49,7 +49,7 @@ class Medico extends Conexion{
     }
     public function medicoupshorariolistar(){
         try { 
-            $sql="select diatrabajo,hora_entrada,hora_salida from trabajo_medico_hora tmh
+            $sql="select trabajo_hora_medico,diatrabajo,hora_entrada,hora_salida from trabajo_medico_hora tmh
             inner join horario_trabajo ht on tmh.horatrabajo=ht.horatrabajo
             where tmh.ups_medico_ipress=:p_upsmedicoipress and estado=1
             order by diatrabajo,hora_entrada";
