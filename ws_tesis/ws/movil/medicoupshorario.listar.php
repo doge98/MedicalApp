@@ -55,12 +55,13 @@ require_once('../../util/Clases/Funciones.clase.php');
         for ($j = 0; $j<$posicion_real; $j++){
             echo ($j+1);
         }*/
-        if(substr($nombredia, 0, 3) == date("D")){
+        
+        /*if(substr($nombredia, 0, 3) == date("D")){
             echo date("D");
-        }
-        echo date("D");
+        }*/
+        
     }
 
-    dias('Viernes');
-
+    //dias('Viernes');
+    echo date("D");
 ?>
