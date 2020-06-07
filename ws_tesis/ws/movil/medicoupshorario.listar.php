@@ -53,7 +53,7 @@ require_once('../../util/Clases/Funciones.clase.php');
             $id++;
         }
         $mod_date = strtotime ('+'.$dia_suma.' day');
-        return date("d-m-Y",$mod_date);
+        return date("Y-m-d",$mod_date);
     }
 
     try{
@@ -78,12 +78,12 @@ require_once('../../util/Clases/Funciones.clase.php');
                     $arrayobjeto[$d]["data"] = $arrayHorario;
                     $d++;
                 }
-                                                                                                                                                                                                                 
+                                                                                                                                                                                            
                 function sortFunction( $a, $b ) {
                     return strtotime($a["title"]) - strtotime($b["title"]);
                 }
                 usort($arrayobjeto, "sortFunction");
-                
+
                 Funciones::imprimeJSON(200, "Éxito", $arrayobjeto);
             
 
