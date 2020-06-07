@@ -11,7 +11,7 @@ require_once('../../util/Clases/Funciones.clase.php');
         exit();
     }*/
     $dias_ES = array("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo");
-    
+
     function dias($dia){
         $dias_EN = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
         $nombredia = str_replace($dias_ES,$dias_EN, $dia);
@@ -78,7 +78,15 @@ require_once('../../util/Clases/Funciones.clase.php');
                     $arrayobjeto[$d]["data"] = $arrayHorario;
                     $d++;
                 }
+                                                                                                                                                                                                                 
+                function sortFunction( $a, $b ) {
+                    return strtotime($a["title"]) - strtotime($b["title"]);
+                }
+                usort($arrayobjeto, "sortFunction");
+                
                 Funciones::imprimeJSON(200, "Éxito", $arrayobjeto);
+            
+
             //}
     }catch(Exception $exc){
         Funciones::mensaje($exc->getMessage(), "e");
